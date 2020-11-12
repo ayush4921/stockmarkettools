@@ -23,16 +23,16 @@ class get_stock_all:
         result_df = result_df.drop(columns=['Industry / Category','Type'])
         if 'sure' in kwargs:
           stock = yf.Ticker(result_df['Symbol'][0])
-          stock_price_tomorrow=stocker.predict.tomorrow(result_df['Symbol'][0])
+          #stock_price_tomorrow=stocker.predict.tomorrow(result_df['Symbol'][0])
         else:
           print(result_df)
           check_stock=input('Is your stock the top one in the table? If yes then type Y; if not then type the symbol of the stocck from the above table: ')
           if check_stock=='Y' or 'y':
               stock = yf.Ticker(result_df['Symbol'][0])
-              stock_price_tomorrow=stocker.predict.tomorrow(result_df['Symbol'][0])
+              #stock_price_tomorrow=stocker.predict.tomorrow(result_df['Symbol'][0])
           else:
               stock = yf.Ticker(check_stock)
-              stock_price_tomorrow=stocker.predict.tomorrow(check_stock)
+              #stock_price_tomorrow=stocker.predict.tomorrow(check_stock)
         info=stock.info
         info_table=pd.DataFrame.from_dict(info,orient='index')
         self.stock=stock
@@ -41,7 +41,7 @@ class get_stock_all:
         self.history=stock.history(period=time_for_graph)
         self.stocklist=result_df
         self.table=info_table
-        self.stockpricetomorrow=stock_price_tomorrow
+        #self.stockpricetomorrow=stock_price_tomorrow
     
     def make_graph(self):
       plt.plot(self.history['Open'])
