@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: stockmarkettools
-Version: 0.2.1
+Version: 0.2.2
 Summary: One stop solution for all your python stock market projects
 Home-page: https://github.com/ayush4921/stockmarkettools
 Author: Ayush Garg
 Author-email: themoviechannel77@gmail.com
 License: MIT
-Download-URL: https://github.com/ayush4921/stockmarkettools/archive/0.2.1.tar.gz
+Download-URL: https://github.com/ayush4921/stockmarkettools/archive/0.2.2.tar.gz
 Description: StockMarketTools is a one stop shop for all your stock market needs. It can predict the stock price for next day, make graphs comparing two stocks, give info of a company, etc.
 Keywords: Stocks,stock scraping,stock graphs,stock prediction
 Platform: UNKNOWN
