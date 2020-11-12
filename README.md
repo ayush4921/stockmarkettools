@@ -1,0 +1,1 @@
+StockMarketTools is a one stop shop for all your stock market needs. It can predict the stock price for next day, make graphs comparing two stocks, give info of a company, etc.
