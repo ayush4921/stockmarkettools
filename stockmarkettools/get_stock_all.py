@@ -49,4 +49,6 @@ class get_stock_all:
       plt.plot(stock2.history['Open'],label=stock2.name)
       plt.legend()
       plt.show()  
+    
+    
       
