@@ -7,8 +7,8 @@ setup(
   description = 'One stop solution for all your python stock market projects',   # Give a short description about your library
   author = 'Ayush Garg',                   # Type in your name
   author_email = 'themoviechannel77@gmail.com',      # Type in your E-Mail
-  url = 'https://github.com/user/reponame',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    # I explain this later on
+  url = 'https://github.com/ayush4921/stockmarkettools',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/ayush4921/stockmarkettools/archive/0.1.tar.gz',    # I explain this later on
   keywords = ['Stocks','stock scraping','stock graphs','stock prediction'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'pandas==1.1.0',
