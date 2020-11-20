@@ -21,14 +21,14 @@ class get_stock_all:
         result_df = df_list[0]
         result_df = result_df.drop(columns=['Industry / Category','Type'])
         if 'sure' in kwargs:
-          stock = yf.Ticker(result_df['Symbol'][0])
+            stock = yf.Ticker(result_df['Symbol'][0])
         else:
-          print(result_df)
-          check_stock=input('Is your stock the top one in the table? If yes then type Y; if not then type the symbol of the stocck from the above table: ')
-          if check_stock=='Y' or 'y':
-              stock = yf.Ticker(result_df['Symbol'][0])
-          else:
-              stock = yf.Ticker(check_stock)
+            print(result_df)
+            check_stock=input('Is your stock the top one in the table? If yes then type Y; if not then type the symbol of the stocck from the above table: ')
+            if check_stock=='Y' or 'y':
+                stock = yf.Ticker(result_df['Symbol'][0])
+            else:
+                stock = yf.Ticker(check_stock)
         info=stock.info
         info_table=pd.DataFrame.from_dict(info,orient='index')
         self.stock=stock
@@ -39,16 +39,17 @@ class get_stock_all:
         self.table=info_table
     
     def make_graph(self):
-      plt.plot(self.history['Open'])
+        plt.plot(self.history['Open'])
+        plt.show()
     @classmethod
     def make_graph_two(cls,name_company1,name_company2,time):
-      stock1=cls(name_company1,time=time,sure='True')
-      stock2=cls(name_company2,time=time,sure='True')
-      # Plot everything by leveraging the very powerful matplotlib package
-      plt.plot(stock1.history['Open'],label=stock1.name)
-      plt.plot(stock2.history['Open'],label=stock2.name)
-      plt.legend()
-      plt.show()  
+        stock1=cls(name_company1,time=time,sure='True')
+        stock2=cls(name_company2,time=time,sure='True')
+        # Plot everything by leveraging the very powerful matplotlib package
+        plt.plot(stock1.history['Open'],label=stock1.name)
+        plt.plot(stock2.history['Open'],label=stock2.name)
+        plt.legend()
+        plt.show()  
     
     
       
